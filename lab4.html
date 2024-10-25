@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion Menu</title>
+    <link rel="stylesheet" href="lab4.css">
+</head>
+<body>
+<nav class="top-navbar">
+    <div class="nav-left">
+        <a href="labs.html" class="back-btn">← Labs</a>
+        <span class="course-title">MuleSoft 4.X Complete Guide For Beginners - Hands On Projects</span>
+    </div>
+    <div class="nav-right">
+        <a href="#" class="nav-link">Leave a rating</a>
+        <a href="#" class="nav-link">Your progress</a>
+        <button class="share-btn">Share</button>
+        <button class="menu-icon">⋮</button>
+    </div>
+</nav>
+<div class="video-container">
+    <div class="video-player">
+        <video controls width="100%" height="auto" poster="thumbnail.jpg">
+            <source src="your-video-file.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+   <div class="menu-container">
+    <div class="menu-header">
+        <h2>Course content</h2>
+    </div>
+
+    <!-- Accordion Menu Items -->
+    <div class="accordion">
+        <!-- Section 1 -->
+        <button class="accordion-button">Section 1: Course Overview</button>
+        <div class="accordion-content">
+            <button class="accordion-sub-button">2. Integration introduction <span class="time">8min</span></button>
+            <div class="accordion-sub-content">
+                <p>Video content for integration introduction goes here...</p>
+            </div>
+
+            <button class="accordion-sub-button">3. Mule API development life cycle and components <span class="time">4min</span></button>
+            <div class="accordion-sub-content">
+                <p>Details about Mule API development...</p>
+            </div>
+
+            <button class="accordion-sub-button">4. Course resources and documents <span class="time">1min</span></button>
+            <div class="accordion-sub-content">
+                <p>Resources and documents information...</p>
+            </div>
+        </div>
+
+        <!-- Section 2 -->
+        <button class="accordion-button">Section 2: Mule 4 installation set-up</button>
+        <div class="accordion-content">
+            <ul>
+                <li>Video 1: Introduction to Mule</li>
+                <li>Video 2: Mule installation steps</li>
+            </ul>
+        </div>
+
+        <!-- Section 3 -->
+        <button class="accordion-button">Section 3: Mule basics</button>
+        <div class="accordion-content">
+            <ul>
+                <li>Video 1: Developing the first Mule app</li>
+                <li>Video 2: Debugging a Mule app</li>
+                <li>Video 3: Export and import Mule apps</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+  <div class="tab-navigation">
+    <div class="search-icon">
+        🔍
+    </div>
+    <div class="tabs">
+        <a href="#" class="tab">Overview</a>
+        <a href="#" class="tab">Q&A</a>
+        <a href="#" class="tab">Announcements</a>
+        <a href="#" class="tab">Learning tools</a>
+    </div>
+</div>
+<div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+</div>
+
+
+
+<script src="lab4.js"></script>
+
+</body>
+</html>
