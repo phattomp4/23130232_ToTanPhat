@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="labs.css" />
+    <title>Course Management System</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="labs.html">Labs</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="tabs">
+        <button class="tablink" onclick="openTab(event, 'Lab1')">Lab 1</button>
+        <button class="tablink" onclick="openTab(event, 'Lab2')">Lab 2</button>
+        <button class="tablink" onclick="openTab(event, 'Lab3')">Lab 3</button>
+        <a href="lab4.html"> <button class="tablink">Lab 4</button></a>
+        <a href="lab5.html"> <button class="tablink">Lab 5</button></a>
+      </div>
+
+      <div id="Lab1" class="tabcontent">
+        <h2>Create / Update Course</h2>
+        <form id="courseForm" onsubmit="return submitCourse(event)">
+          <label for="courseId">Course ID:</label>
+          <input
+            type="text"
+            id="courseId"
+            name="courseId"
+            required
+            maxlength="255"
+          /><br />
+
+          <label for="courseName">Course Name:</label>
+          <input
+            type="text"
+            id="courseName"
+            name="courseName"
+            required
+            maxlength="255"
+          /><br />
+
+          <label for="courseDescription">Course Description:</label>
+          <textarea
+            id="courseDescription"
+            name="courseDescription"
+            rows="4"
+          ></textarea
+          ><br />
+
+          <label for="instructor">Instructor:</label>
+          <select id="instructor" name="instructor" required>
+            <option value="">Select an instructor</option>
+            <option value="1">Instructor 1</option>
+            <option value="2">Instructor 2</option>
+            <option value="3">Instructor 3</option></select
+          ><br />
+
+          <label for="createdAt">Created At:</label>
+          <input
+            type="text"
+            id="createdAt"
+            name="createdAt"
+            required
+            maxlength="255"
+          /><br />
+
+          <label for="updatedAt">Updated At:</label>
+          <input
+            type="text"
+            id="updatedAt"
+            name="updatedAt"
+            required
+            maxlength="255"
+          /><br />
+
+          <button type="submit">Create / Update Course</button>
+          <button type="button" onclick="confirmDelete()">Delete Course</button>
+          <button type="button" onclick="viewCourse()">View Course</button>
+        </form>
+
+        <div id="courseDetails" style="display: none">
+          <h2>Course Details</h2>
+          <p id="detailsContent"></p>
+          <button onclick="closeDetails()">Close</button>
+        </div>
+      </div>
+
+      <div id="Lab2" class="tabcontent" style="display: none">
+        <h2>Student Login</h2>
+        <form id="loginForm" onsubmit="return login(event)">
+          <label for="username">Username/Email:</label>
+          <input type="text" id="username" name="username" required /><br />
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required /><br />
+
+          <button type="submit">Login</button>
+          <a href="#">Forgot Password?</a>
+        </form>
+
+        <div id="dashboard" style="display: none">
+          <h2>Exercises Dashboard</h2>
+          <input type="text" id="search" placeholder="Search exercises..." />
+          <select id="languageFilter">
+            <option value="">All Languages</option>
+            <option value="C">C</option>
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+          </select>
+          <button onclick="logout()">Logout</button>
+          <div id="exercises"></div>
+        </div>
+      </div>
+
+      <div id="Lab3" class="tabcontent">
+        <div class="container">
+          <h1>Available Materials</h1>
+          <div class="material-grid">
+            <div class="material-item">
+              <div class="icon"></div>
+              <h3>All about Django Python</h3>
+              <button class="view-button">View Materials</button>
+            </div>
+            <div class="material-item">
+              <div class="icon"></div>
+              <h3>FEE</h3>
+              <button class="view-button">View Materials</button>
+            </div>
+            <div class="material-item">
+              <div class="icon"></div>
+              <h3>Hibernate</h3>
+              <button class="view-button">View Materials</button>
+            </div>
+            <div class="material-item">
+              <div class="icon"></div>
+              <h3>Java Mock Project</h3>
+              <button class="view-button">View Materials</button>
+            </div>
+            <div class="material-item">
+              <div class="icon"></div>
+              <h3>Java Programming Language</h3>
+              <button class="view-button">View Materials</button>
+            </div>
+            <div class="material-item">
+              <div class="icon"></div>
+              <h3>Java Spring Framework</h3>
+              <button class="view-button">View Materials</button>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+
+  
+    </main>
+
+    <footer>
+      <p>� 2024 Course Management System</p>
+    </footer>
+
+    <script src="labs.js"></script>
+  </body>
+</html>
