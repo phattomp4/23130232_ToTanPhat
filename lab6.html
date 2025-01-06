@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coderbyte Style Page</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* Header */
+        .header {
+            background-color: #0c2438;
+            padding: 20px;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .header nav a {
+            color: #ffffff;
+            margin-left: 20px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        /* Main Section */
+        .main-section {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .main-section h2 {
+            font-size: 36px;
+            color: #1dc489;
+            margin-bottom: 10px;
+        }
+
+        .main-section h3 {
+            font-size: 24px;
+            color: #333;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .main-section p {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        /* Email and Button */
+        .email-input {
+            padding: 10px;
+            font-size: 16px;
+            width: 250px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .start-trial-btn {
+            padding: 12px 25px;
+            background-color: #1dc489;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .start-trial-btn:hover {
+            background-color: #17a076;
+        }
+
+        /* Icon Section */
+        .icon-section {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+            gap: 10px;
+        }
+
+        .icon {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #ffffff;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .icon img {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Coderbyte</h1>
+        <nav>
+            <a href="#">Developers</a>
+            <a href="#">Organizations</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <section class="main-section">
+        <h2>Evaluate Candidates Quickly, <br>
+          Affordably, and Accurately</h2>
+        <h3>The #1 platform for technical assessments, interviews, and projects.</h3>
+        <p>Get unlimited candidates and admins on every plan.</p>
+
+        <input type="email" placeholder="Work email address" class="email-input">
+        <button class="start-trial-btn">Start Trial</button>
+    </section>
+
+    <!-- Icon Section -->
+    <div class="icon-section">
+        <div class="icon"><img src="https://cdn.glitch.global/e122c0e7-b3b7-4ec8-b3c4-5570fecd3f53/aws-logo-920x920-sue-v01.png?v=1731061664082">AWS</div>
+        <div class="icon"><img src="https://cdn.glitch.global/e122c0e7-b3b7-4ec8-b3c4-5570fecd3f53/images.png?v=1731061837493">GO</div>
+        <div class="icon"><img src="https://cdn.glitch.global/e122c0e7-b3b7-4ec8-b3c4-5570fecd3f53/Android_logo_2019_(stacked).svg?v=1731061886638">Android</div>
+        <div class="icon"><img src="https://cdn.glitch.global/e122c0e7-b3b7-4ec8-b3c4-5570fecd3f53/916600200c-sharp-c-seeklogo.com.png?v=1731061943636">C#</div>
+        <div class="icon"><img src="https://cdn.glitch.global/e122c0e7-b3b7-4ec8-b3c4-5570fecd3f53/images%20(1).png?v=1731061976576">Node JS</div>
+        <div class="icon"><img src="https://cdn.glitch.global/e122c0e7-b3b7-4ec8-b3c4-5570fecd3f53/javascript-logo-javascript-icon-transparent-free-png.webp?v=1731062046840">JS</div>
+        <div class="icon"><img src="https://cdn.glitch.global/e122c0e7-b3b7-4ec8-b3c4-5570fecd3f53/vue-2.png?v=1731062092428">Vue JS</div>
+        <div class="icon"><img src="https://cdn.glitch.global/e122c0e7-b3b7-4ec8-b3c4-5570fecd3f53/React-icon.svg.png?v=1731062118730">React</div>
+        <!-- Add more icons as needed -->
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Learning - Tabs Interface</title>
+    <link rel="stylesheet" href="lab5.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header Section -->
+      <div class="header">
+        My learning <br />
+        <span>87hr 36min watched</span>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <div class="nav-tabs">
+        <div class="tab-link active" onclick="openTab('all-courses')">
+          All courses
+        </div>
+        <div class="tab-link" onclick="openTab('learning-paths')">
+          Learning paths
+        </div>
+        <div class="tab-link" onclick="openTab('certifications')">
+          Certifications
+        </div>
+        <div class="tab-link" onclick="openTab('archived')">Archived</div>
+        <div class="tab-link" onclick="openTab('learning-tools')">
+          Learning tools
+        </div>
+      </div>
+
+      <!-- Tab Contents -->
+      <div id="all-courses" class="tab-content active">
+        <h3>All Courses</h3>
+        <p>Explore all available courses here.</p>
+      </div>
+
+      <div id="learning-paths" class="tab-content">
+        <h3>Learning Paths</h3>
+        <p>Discover structured paths to guide your learning.</p>
+      </div>
+
+      <div id="certifications" class="tab-content">
+        <!-- Certifications Section -->
+        <div class="certifications">
+          <!-- Badges Section -->
+          <div class="badge-section">
+            <div>
+              <h3>My badges</h3>
+              <p>You have earned and uploaded 0 badges</p>
+              <p>
+                Currently, there are no badges uploaded to your profile. Begin
+                your journey towards your certification goals or upload your
+                third-party badges to your profile and impress your manager and
+                peers with your accomplishments. Start preparing for your next
+                certificate today!
+              </p>
+            </div>
+            <button class="import-button">Import new badge</button>
+          </div>
+        </div>
+        <!-- Certification Preparation -->
+        <div class="certification-preparation">
+          <h3 class="prepare-title">Certification preparation</h3>
+          <p>You are preparing for 4 certifications</p>
+          <button class="prepare-button">
+            Explore certification preparation
+          </button>
+        </div>
+
+        <!-- Certification Cards -->
+        <div class="certification-cards">
+          <div class="certification-card">
+            <img
+              src="https://cdn.glitch.global/52f80943-8f17-4295-bb2e-c171cf6edba7/aazxzx.png?v=1729915318865"
+              style="width: 150px; height: 150px"
+            />
+            <div class="info">
+              <h4>Oracle Certified Associate, Java SE 8 Programmer</h4>
+              <p>Oracle</p>
+            </div>
+          </div>
+
+          <div class="certification-card">
+            <img
+              src="https://cdn.glitch.global/52f80943-8f17-4295-bb2e-c171cf6edba7/ssss.png?v=1729915407125"
+              style="width: 150px; height: 150px"
+            />
+            <div class="info">
+              <h4>ISTQB® Certified Tester Foundation Level (CTFL)</h4>
+              <p>Brightest</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="archived" class="tab-content">
+        <!-- Archived Tab Content -->
+        <div class="archived-content">
+          <!-- Course Card 1 -->
+          <div class="course-card">
+            <div class="course-image">
+              <img
+                src="https://cucumber.fsoft.com.vn/wp-content/uploads/sites/14/2024/07/449195949_1473413799971613_5552893858740191333_n-1024x577.png"
+              />
+            </div>
+            <div class="course-info">
+              <div class="course-title">
+                FPT_Corporate Social Responsibility Training 2024
+              </div>
+              <div class="course-subtitle">FSOFT Content Development</div>
+              <div class="course-status">
+                100% complete <br />
+                <span>★★★★☆</span> Your rating
+              </div>
+            </div>
+          </div>
+
+          <!-- Course Card 2 (Add more course cards as needed) -->
+          <div class="course-card">
+            <div class="course-image">
+              <img
+                src="https://fpt.edu.vn/Resources/article/uploads/2023/06/20230616_6.Poster-FCBEM2023-02.png"
+              />
+            </div>
+            <div class="course-info">
+              <div class="course-title">
+                FPT_Advanced Leadership Training 2023
+              </div>
+              <div class="course-subtitle">FSOFT Leadership Academy</div>
+              <div class="course-status">
+                90% complete <br />
+                <span>★★★★☆</span> Your rating
+              </div>
+            </div>
+          </div>
+
+          <!-- Course Card 3 -->
+          <div class="course-card">
+            <div class="course-image">
+              <img
+                src="https://fptsoftware.com/-/media/project/fpt-software/fso/wp-content/uploads/sites/2/2021/01/FPT-Digital-Kaizen-overview-.png"
+              />
+            </div>
+            <div class="course-info">
+              <div class="course-title">
+                FPT_Digital Transformation Workshop
+              </div>
+              <div class="course-subtitle">FSOFT Innovation Lab</div>
+              <div class="course-status">
+                80% complete <br />
+                <span>★★★☆☆</span> Your rating
+              </div>
+            </div>
+          </div>
+
+          <!-- Course Card 4 -->
+          <div class="course-card">
+            <div class="course-image">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnJf4t9k3QGZjghZ306I2CUwjRQyXwDVc3oQ&s"
+              />
+            </div>
+            <div class="course-info">
+              <div class="course-title">FPT_Cybersecurity Essentials</div>
+              <div class="course-subtitle">FSOFT Security Team</div>
+              <div class="course-status">
+                100% complete <br />
+                <span>★★★★★</span> Your rating
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="learning-tools" class="tab-content">
+        <!-- Learning Tools Section -->
+        <div class="learning-tools">
+          <h3>Learning tools</h3>
+          <p class="description">
+            Explore a diverse range of courses and take advantage of these
+            versatile tools to gain knowledge, skills, and confidence at your
+            own pace.
+          </p>
+
+          <!-- Tool Cards -->
+          <div class="tool-cards">
+            <!-- Learning Reminders -->
+            <div class="tool-card">
+              <h4>
+                <img
+                  src="https://cdn.glitch.global/52f80943-8f17-4295-bb2e-c171cf6edba7/c6a4a5c5-c264-47d0-991f-c99b1ec11328.image.png?v=1729914890332"
+                  style="width: 25px; height: 25px"
+                />
+                Learning reminders
+              </h4>
+              <p>
+                Set time aside to learn and get reminders using your scheduler.
+              </p>
+              <p>You currently have no ongoing reminders.</p>
+              <a href="#">See more</a>
+            </div>
+
+            <!-- Reflections -->
+            <div class="tool-card">
+              <h4>
+                <img
+                  src="https://cdn.glitch.global/52f80943-8f17-4295-bb2e-c171cf6edba7/24a3b3bd-4e4b-4de9-a8c0-8d78e5521f50.image.png?v=1729915185181"
+                  style="width: 25px; height: 25px"
+                />
+                <span class="beta-badge">Beta</span>
+              </h4>
+              <p>Take time to reflect to strengthen your learning.</p>
+              <p>
+                You have currently no recorded reflections on your learning
+                journey.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="lab5.js"></script>
+  </body>
+</html>
