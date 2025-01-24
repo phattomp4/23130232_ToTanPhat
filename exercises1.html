@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="labs.css" />
+    <title>Course Management System</title>
+  </head>
+  <body>
+    
+    <main>
+      <div class="tabs">
+        <a href="lab1.html"> <button class="tablink">Lab 1</button></a>
+        <a href="lab2.html"> <button class="tablink">Lab 2</button></a>
+        <a href="lab3.html"> <button class="tablink">Lab 3</button></a>
+        <a href="lab4.html"> <button class="tablink">Lab 4</button></a>
+        <a href="lab5.html"> <button class="tablink">Lab 5</button></a>
+        <a href="lab6.html"> <button class="tablink">Lab 6</button></a>
+      </div>
+
+
+  <!-- Menu điều hướng -->
+ 
+
+<header>
+    
+    <h1 id="exercise-title"></h1>
+    <p id="exercise-description"></p>
+</header>
+
+<div id="code-editor">
+    <textarea id="codeInput" rows="10" style="width: 100%;"></textarea>
+    <button onclick="runCode()">Run Code</button>
+    <button onclick="clearCode()">Clear Code</button>
+    <button onclick="submitCode()">Submit Code</button>
+    <button onclick="saveProgress()">Save Progress</button>
+</div>
+<div id="resultSection" style="display:none;">
+    <h2>Submission Results</h2>
+    <p id="submissionStatus"></p>
+    <p>Expected Output: <span id="expectedOutput"></span></p>
+    <p>Actual Output: <span id="actualOutput"></span></p>
+    <p>Time Taken: <span id="executionTime"></span> ms</p>
+    <p>Memory Used: <span id="memoryUsed"></span> MB</p>
+    <p>Tests Passed: <span id="testsPassed"></span></p>
+    <button onclick="retryCode()">Retry</button>
+    <button onclick="goToDashboard()">Back to Dashboard</button>
+</div>
+
+
+<script>
+    // Lấy tiêu đề và mô tả từ URL
+    const params = new URLSearchParams(window.location.search);
+    const title = params.get('title');
+    const description = params.get('description');
+
+    document.getElementById('exercise-title').textContent = title;
+    document.getElementById('exercise-description').textContent = description;
+
+    let expectedOutput = "Hello, World!"; // Kết quả mong muốn
+    let testCases = [
+        { input: "Hello, World!", expected: "Hello, World!" },
+        { input: "Test Case", expected: "Test Case" }
+    ]; // Các trường hợp kiểm tra
+
+    function runCode() {
+        const code = document.getElementById('codeInput').value;
+        let output;
+        let testsPassed = 0;
+        let executionTime = 0;
+
+        try {
+            const start = performance.now();
+            output = new Function(code)();
+            executionTime = performance.now() - start;
+            document.getElementById('submissionStatus').textContent = 'Success';
+            document.getElementById('actualOutput').textContent = output || "No output";
+
+            // Kiểm tra các trường hợp
+            for (let testCase of testCases) {
+                if (new Function(code)(testCase.input) === testCase.expected) {
+                    testsPassed++;
+                }
+            }
+        } catch (error) {
+            document.getElementById('submissionStatus').textContent = 'Error';
+            document.getElementById('actualOutput').textContent = error.message;
+        }
+
+        // Hiển thị thông tin kết quả
+        document.getElementById('resultSection').style.display = 'block';
+        document.getElementById('expectedOutput').textContent = expectedOutput;
+        document.getElementById('executionTime').textContent = executionTime.toFixed(2);
+        document.getElementById('testsPassed').textContent = `${testsPassed} / ${testCases.length}`;
+        // Tính toán và hiển thị bộ nhớ sử dụng (nếu có)
+        // document.getElementById('memoryUsed').textContent = ...; // Cần logic để đo lường bộ nhớ
+    }
+
+    function clearCode() {
+        document.getElementById('codeInput').value = '';
+    }
+
+    function submitCode() {
+        // Chuyển hướng đến trang kết quả (có thể thay đổi logic sau)
+        alert("Submitting code for review...");
+    }
+
+    function saveProgress() {
+        const code = document.getElementById('codeInput').value;
+        localStorage.setItem('savedCode', code); // Lưu tiến trình vào localStorage
+        alert("Progress saved!");
+    }
+
+    function retryCode() {
+        document.getElementById('resultSection').style.display = 'none';
+        clearCode();
+    }
+
+    function goToDashboard() {
+        window.location.href = 'exercises.html';
+    }
+
+    // Khi trang được tải, kiểm tra xem có mã đã lưu không
+    window.onload = function() {
+        const savedCode = localStorage.getItem('savedCode');
+        if (savedCode) {
+            document.getElementById('codeInput').value = savedCode;
+        }
+    };
+    // Hiển thị phần kết quả
+    document.getElementById('resultSection').style.display = 'block';
+    
+
+    function clearCode() {
+        document.getElementById('codeInput').value = '';
+    }
+
+    function submitCode() {
+        const code = document.getElementById('codeInput').value;
+
+        // Giả lập việc chạy mã và lấy kết quả
+        let status = 'Success'; // Thay đổi thành 'Error' hoặc 'Compilation Error' hoặc 'Timeout' nếu cần thiết
+        let expectedOutput = "Hello, World!"; // Kết quả mong muốn
+        let actualOutput = "Hello, World!"; // Kết quả thực tế
+        let executionTime = 100; // Thời gian thực hiện
+        let memoryUsed = 10; // Bộ nhớ sử dụng
+
+        // Chuyển hướng tới trang kết quả
+        window.location.href = ``;
+    }
+    function submitCode() {
+const code = document.getElementById('codeInput').value;
+
+// Giả lập việc chạy mã và lấy kết quả
+let status = 'Success'; // Thay đổi thành 'Error' hoặc 'Compilation Error' hoặc 'Timeout' nếu cần thiết
+let expectedOutput = "Hello, World!"; // Kết quả mong muốn
+let actualOutput = "Hello, World!"; // Kết quả thực tế
+let executionTime = 100; // Thời gian thực hiện
+let memoryUsed = 10; // Bộ nhớ sử dụng
+let testsPassed = 2; // Số trường hợp kiểm tra đã vượt qua
+let totalTests = 2; // Tổng số trường hợp kiểm tra
+
+// Chuyển hướng tới trang kết quả
+window.location.href = ``;
+}
+
+</script>
+
+
+
+  
+    </main>
+
+   
+
+    <script src="labs.js"></script>
+  
+  </body>
+</html>

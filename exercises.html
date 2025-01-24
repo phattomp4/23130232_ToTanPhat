@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="labs.css" />
+    <title>Course Management System</title>
+  </head>
+  <body>
+    
+    <main>
+      <div class="tabs">
+        <a href="lab1.html"> <button class="tablink">Lab 1</button></a>
+        <a href="lab2.html"> <button class="tablink">Lab 2</button></a>
+        <a href="lab3.html"> <button class="tablink">Lab 3</button></a>
+        <a href="lab4.html"> <button class="tablink">Lab 4</button></a>
+        <a href="lab5.html"> <button class="tablink">Lab 5</button></a>
+        <a href="lab6.html"> <button class="tablink">Lab 6</button></a>
+      </div>
+
+
+  <!-- Màn hình bảng điều khiển bài tập -->
+  <section class="dashboard-container" id="dashboard-section">
+    <header>
+        <h1 style="color: antiquewhite;">Welcome to the Programming Exercises Dashboard</h1>
+        <div class="filter-search">
+            <select id="languageFilter" onchange="filterExercises()">
+                <option value="all">All Languages</option>
+                <option value="C">C</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+            </select>
+            <input type="text" id="searchBar" placeholder="Search exercises..." oninput="filterExercises()" />
+        </div>
+    </header>
+
+    <section class="exercise-list" id="exerciseList">
+        <h2>Available Exercises</h2>
+
+        <!-- Bài tập 1 -->
+        <div class="exercise-item" data-language="C">
+            <h4>Exercise 1: Basic C Loop</h4>
+            <p>Description: Learn how to create loops in C.</p>
+            <p>Difficulty: Easy</p>
+            <p>Time Limit: 15 minutes</p>
+            <!-- Nút dẫn tới trang exercise-detail.html với tham số URL -->
+            <a href="exercises1.html?title=Basic C Loop&description=Learn how to create loops in C">
+                <button class="select-exercise">Select</button>
+            </a>
+        </div>
+
+        <!-- Bài tập 2 -->
+        <div class="exercise-item" data-language="C">
+            <h4>Exercise 2: Array Manipulation</h4>
+            <p>Description: Practice array manipulation in C.</p>
+            <p>Difficulty: Medium</p>
+            <p>Time Limit: 30 minutes</p>
+            <!-- Nút dẫn tới trang exercise-detail.html với tham số URL -->
+            <a href="exercises1.html?title=Array Manipulation&description=Practice array manipulation in C">
+                <button class="select-exercise">Select</button>
+            </a>
+        </div>
+
+        <!-- Bài tập 3 -->
+        <div class="exercise-item" data-language="Python">
+            <h4>Exercise 3: Basic Python Loop</h4>
+            <p>Description: Learn how to create loops in Python.</p>
+            <p>Difficulty: Easy</p>
+            <p>Time Limit: 10 minutes</p>
+            <!-- Nút dẫn tới trang exercise-detail.html với tham số URL -->
+            <a href="exercises1.html?title=Basic Python Loop&description=Learn how to create loops in Python">
+                <button class="select-exercise">Select</button>
+            </a>
+        </div>
+    </section>
+</section>
+
+
+
+  
+    </main>
+
+   
+
+    <script src="labs.js"></script>
+  
+  </body>
+</html>

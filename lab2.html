@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="labs.css" />
+    <title>Course Management System</title>
+  </head>
+  <body>
+    <style>
+
+      .tabcontentss{
+        display: none;
+      }
+    </style>
+    <main>
+      <div class="tabs">
+        <a href="lab1.html"> <button class="tablink">Lab 1</button></a>
+        <a href="lab2.html"> <button class="tablink">Lab 2</button></a>
+        <a href="lab3.html"> <button class="tablink">Lab 3</button></a>
+        <a href="lab4.html"> <button class="tablink">Lab 4</button></a>
+        <a href="lab5.html"> <button class="tablink">Lab 5</button></a>
+        <a href="lab6.html"> <button class="tablink">Lab 6</button></a>
+      </div>
+
+     
+        <!-- Tab links -->
+<div class="tabss">
+  <button class="tablinkss" onclick="openCity(event, 'Requirement')">Requirement</button>
+  <button class="tablinkss" onclick="openCity(event, 'Design')">Design</button>
+  <button class="tablinkss" onclick="openCity(event, 'Implement')">Implement</button>
+</div>
+
+<!-- Tab content -->
+<div id="Requirement" class="tabcontentss">
+  <h3>Requirement</h3>
+  <img src="https://cdn.glitch.global/f63c9505-ec45-45af-bbba-061333dbd6a7/%E1%BA%A2nh%20ch%E1%BB%A5p%20m%C3%A0n%20h%C3%ACnh%202025-01-24%20180146.png?v=1737716623191" style="width: 800px; height: 600px;" alt=""><br>
+  <img src="https://cdn.glitch.global/f63c9505-ec45-45af-bbba-061333dbd6a7/%E1%BA%A2nh%20ch%E1%BB%A5p%20m%C3%A0n%20h%C3%ACnh%202025-01-24%20180226.png?v=1737716657376" style="width: 800px; height: 400px;" alt=""><br>
+  <img src="https://cdn.glitch.global/f63c9505-ec45-45af-bbba-061333dbd6a7/%E1%BA%A2nh%20ch%E1%BB%A5p%20m%C3%A0n%20h%C3%ACnh%202025-01-24%20180242.png?v=1737716683822" style="width: 800px; height: 600px;" alt="">
+</div>
+
+<div id="Design" class="tabcontentss">
+  <h3>Design</h3>
+  <img src="https://cdn.glitch.global/f63c9505-ec45-45af-bbba-061333dbd6a7/%E1%BA%A2nh%20ch%E1%BB%A5p%20m%C3%A0n%20h%C3%ACnh%202025-01-24%20180554.png?v=1737718210893" style="width: 1000px; height: 600px;" alt=""><br>
+  <img src="https://cdn.glitch.global/f63c9505-ec45-45af-bbba-061333dbd6a7/%E1%BA%A2nh%20ch%E1%BB%A5p%20m%C3%A0n%20h%C3%ACnh%202025-01-24%20180617.png?v=1737718215993" style="width: 1000px; height: 600px;" alt=""><br>
+  <img src="https://cdn.glitch.global/f63c9505-ec45-45af-bbba-061333dbd6a7/%E1%BA%A2nh%20ch%E1%BB%A5p%20m%C3%A0n%20h%C3%ACnh%202025-01-24%20183034.png?v=1737718285027" style="width: 1000px; height: 600px;" alt=""><br>
+</div>
+
+<div id="Implement" class="tabcontentss">
+    <!-- Màn hình đăng nhập -->
+    <section class="container">
+        <div class="login-container">
+            <div class="circle circle-one"></div>
+            <div class="form-container">
+                <h1 class="opacity" style="color: #0073ff;">LOGIN</h1>
+                <form>
+                    <input type="text" placeholder="USERNAME" />
+                    <input type="password" placeholder="PASSWORD" />
+                    <!-- Nút SUBMIT dẫn tới trang dashboard.html -->
+                    <a href="exercises.html">
+                        <button type="button" id="submitButton" class="opacity">SUBMIT</button>
+                    </a>
+                </form>
+                <div class="register-forget opacity">
+                    <a href="">REGISTER</a>
+                    <a href="">FORGOT PASSWORD</a>
+                </div>
+            </div>
+            <div class="circle circle-two"></div>
+        </div>
+        <div class="theme-btn-container"></div>
+    </section>
+  
+</div>
+
+
+  
+    </main>
+
+   
+
+    <script src="labs.js"></script>
+  
+  </body>
+</html>

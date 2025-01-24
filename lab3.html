@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="labs.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Course Management System</title>
+  </head>
+  <body>
+    <style>
+
+
+.tabcontentss{
+        display: none;
+      }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.container {
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.material-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.material-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+    color: #007bff;
+    font-size: 50px;
+}
+
+.aaaa {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.aaaa:hover {
+  background-color: #0056b3;
+}
+
+.content-viewer {
+  display: none;
+  display: flex;
+}
+
+.sidebar {
+  width: 25%;
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+.sidebar ul li:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.lesson-content {
+  padding: 20px;
+  width: 75%;
+}
+    </style>
+    <main>
+      <div class="tabs">
+        <a href="lab1.html"> <button class="tablink">Lab 1</button></a>
+        <a href="lab2.html"> <button class="tablink">Lab 2</button></a>
+        <a href="lab3.html"> <button class="tablink">Lab 3</button></a>
+        <a href="lab4.html"> <button class="tablink">Lab 4</button></a>
+        <a href="lab5.html"> <button class="tablink">Lab 5</button></a>
+        <a href="lab6.html"> <button class="tablink">Lab 6</button></a>
+      </div>
+
+     
+        <!-- Tab links -->
+<div class="tabss">
+  <button class="tablinkss" onclick="openCity(event, 'Requirement')">Requirement</button>
+  <button class="tablinkss" onclick="openCity(event, 'Design')">Design</button>
+  <button class="tablinkss" onclick="openCity(event, 'Implement')">Implement</button>
+</div>
+
+<!-- Tab content -->
+<div id="Requirement" class="tabcontentss">
+  <h3>Requirement</h3>
+  <p>Giao diện chia sẻ tài liệu học tập cho sinh viên theo môn học. Mỗi môn học có thể chia sẻ các tài liệu như Bài giảng / Bài tập / Tài liệu tham khảo.</p>
+</div>
+
+<div id="Design" class="tabcontentss">
+  <h3>Design</h3>
+  <img src="https://cdn.glitch.global/f63c9505-ec45-45af-bbba-061333dbd6a7/%E1%BA%A2nh%20ch%E1%BB%A5p%20m%C3%A0n%20h%C3%ACnh%202025-01-24%20191834.png?v=1737721211724" style="width: 1200px; height: 500px;" alt=""><br>
+  <img src="https://cdn.glitch.global/f63c9505-ec45-45af-bbba-061333dbd6a7/%E1%BA%A2nh%20ch%E1%BB%A5p%20m%C3%A0n%20h%C3%ACnh%202025-01-24%20191852.png?v=1737721212515" style="width: 1200px; height: 500px;" alt="">
+</div>
+
+<div id="Implement" class="tabcontentss">
+    <div class="container" id="materials-list">
+        <h1>Available Materials</h1>
+        <div class="materials-grid">
+          <div class="material-card">
+            <div class="icon"> <i class="fas fa-book"></i> </div>
+            <h3>All about Django Python</h3>
+            <button class="aaaa" onclick="viewMaterial('Introduction')">View Materials</button>
+          </div>
+          <div class="material-card">
+            <div class="icon"> <i class="fas fa-book"></i> </div>
+            <h3>FEE</h3>
+            <button class="aaaa" onclick="viewMaterial('FEE Content')">View Materials</button>
+          </div>
+          <div class="material-card">
+            <div class="icon"> <i class="fas fa-book"></i> </div>
+            <h3>Hibernate</h3>
+            <button class="aaaa" onclick="viewMaterial('Hibernate Content')">View Materials</button>
+          </div>
+          <div class="material-card">
+            <div class="icon"> <i class="fas fa-book"></i> </div>
+            <h3>Java Mock Project</h3>
+            <button class="aaaa" onclick="viewMaterial('Introduction')">View Materials</button>
+          </div>
+          <div class="material-card">
+            <div class="icon"> <i class="fas fa-book"></i> </div>
+            <h3>Java Programming Language</h3>
+            <button class="aaaa" onclick="viewMaterial('Introduction')">View Materials</button>
+          </div>
+          <div class="material-card">
+            <div class="icon"> <i class="fas fa-book"></i> </div>
+            <h3>Java Spring Framework</h3>
+            <button class="aaaa" onclick="viewMaterial('Introduction')">View Materials</button>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Material Content Viewer -->
+      <div class="content-viewer" id="material-content">
+        <div class="sidebar">
+          <h2>Lessons</h2>
+          <ul>
+            <li onclick="showLesson('Introduction')">1. Introduction</li>
+            <li onclick="showLesson('Setup')">2. Setting Up the Development Environment</li>
+            <li onclick="showLesson('Django Basics')">3. Django Basics</li>
+            <li onclick="showLesson('Advanced Concepts')">4. Django Advanced Concepts</li>
+          </ul>
+          <button onclick="backToList()">Back to list</button>
+        </div>
+        <div class="lesson-content" id="lesson-display">
+          <h1>1. Introduction</h1>
+          <p>
+            1.1 Basics of Python<br>
+            - Python Installation<br>
+            - Python Syntax<br>
+            - Variables and Data Types<br>
+          </p>
+        </div>
+      </div>
+  
+</div>
+
+
+  
+    </main>
+
+   <script>
+    function viewMaterial(content) {
+  document.getElementById("materials-list").style.display = "none";
+  document.getElementById("material-content").style.display = "flex";
+  document.getElementById("lesson-display").innerHTML = `<h1>${content}</h1>`;
+}
+
+function backToList() {
+  document.getElementById("materials-list").style.display = "block";
+  document.getElementById("material-content").style.display = "none";
+}
+
+function showLesson(lesson) {
+  document.getElementById("lesson-display").innerHTML = `<h1>${lesson}</h1>`;
+}
+   </script>
+
+    <script src="labs.js"></script>
+  
+  </body>
+</html>
